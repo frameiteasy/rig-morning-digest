@@ -1,8 +1,9 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
+closed: 2026-11-15
 ---
 
 # Morning digest
@@ -77,3 +78,18 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| # | Issue | Blocked by | Worker | Closed |
+|---|-------|-----------|--------|--------|
+| 1 | Run log reader: src/digest (types.ts first) | — | claude-code · claude-opus-5-5 · default | 2026-11-15 |
+| 2 | Digest page: GET /digest/:night | #1 | claude-code · claude-sonnet-5 · default | 2026-11-15 |
+| 3 | Digest JSON: GET /api/digest/:night | #1 | claude-code · claude-haiku-4-5 · default | 2026-11-15 |
+| 4 | Board link: each night to its digest, with counts | #1 | claude-code · claude-sonnet-5 · default | 2026-11-15 |
+| 5 | Route tests for /digest and /api/digest | #1 | claude-code · claude-haiku-4-5 · default | 2026-11-15 |
+| 6 | Preview for review: public HTML copy of /digest/2026-10-28 | #2 | claude-code · claude-opus-5-5 · default | 2026-11-15 |
+| 7 | Clean up: preview without lane marker, plan to done | #6 | claude-code · claude-opus-5-5 · default | 2026-11-15 |
+
+#6 was closed once before the reviewer looked and reopened. The preview at
+https://frameiteasy-rig-digest.surge.sh was re-uploaded with `LANE_MARKER` unset on 2026-11-15.
